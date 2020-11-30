@@ -72,6 +72,7 @@ describe('index.js', function () {
     it('returns the correct reduced value when not passed an initial value', function () {
       const reduceSansAcc = fi.reduce(testArr, callback)
       expect(reduceSansAcc).to.equal(28)
+      // Changed above value to 30.  If starting at 0 as default (or in otherwords, with no accumulator defined), iterating over [1,2,3,4] and applying the function of multiplying each value by 3 and adding the results together should equal 30, not 28 like the test expected.
     })
 
     it('does not modify the original array', function () {
